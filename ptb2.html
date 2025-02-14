@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function ptb1(a, b) {
+            if (a == 0 && b == 0) {
+                return "Nghiệm đúng với mọi x";
+            }
+            else if (a == 0 && b != 0) {
+                return "Vô nghiệm";
+            }
+            else {
+                return "x = " + -b / a;
+            }
+        }
+
+        function ptb2(a, b, c) {
+            if (a == 0) {
+                return "Đây là phương trình bậc nhất, không phải phương trình bậc 2: " + ptb1(b,c);
+            }
+            else {
+                let delta = b * b - 4 * a * c;
+                if (delta > 0) {
+                    return "Phương trình có 2 nghiệm phân biệt: \nx1 = " + (-b + Math.sqrt(delta)) / 2 * a + "\nx2 = " + (-b - Math.sqrt(delta)) / 2 * a 
+                }
+                else if (delta == 0) {
+                    return "Phương trình có nghiệm kép: x1 = x2 = " + -b / (2 * a)
+                }
+                else {
+                    return "Phương trình vô nghiệm"
+                }
+            }
+        }
+        let nghiem = ptb2(1, 4, -2);
+        console.log(nghiem);
+    </script>
+</body>
+</html>

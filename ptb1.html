@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function ptb1(a, b){
+            if(a == 0 && b == 0){
+                return "Nghiệm đúng với mọi x";
+            }
+            else if(a == 0 && b != 0){
+                return "Vô nghiệm";
+            }
+            else {
+                return -b/a;
+            }
+        }
+        let x = ptb1(0,1);
+        console.log(x);
+    </script>
+</body>
+</html>
