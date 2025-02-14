@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-        function ptb1(a, b){
-            if(a == 0 && b == 0){
-                return "Nghiệm đúng với mọi x";
+        function ptb1(a, b) {
+            if (a == 0 && b == 0) {
+                return "Phương trình có vô số nghiệm";
             }
-            else if(a == 0 && b != 0){
-                return "Vô nghiệm";
+            else if (a == 0 && b != 0) {
+                return "Phương trình vô nghiệm";
             }
             else {
-                return -b/a;
+                return "Phương trình có 1 nghiệm duy nhất: x = " + -b / a;
             }
         }
-        let x = ptb1(0,1);
+        let x = ptb1(2, 1);
         console.log(x);
     </script>
 </body>
+
 </html>
